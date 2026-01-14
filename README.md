@@ -7,3 +7,8 @@ Patient Satisfaction Score: 5.09 / 10
 Average Wait Time: ~35 minutes 
 
 The ER handled high volume with moderate wait times, indicating potential capacity pressure during peak hours.
+
+
+Hospital emergency dashboard.pdf is a snapshot of the dashboard
+Geetika's hospital emergency room dashboard contains the dashboard video
+hospital ER_data contains the sample dataset
