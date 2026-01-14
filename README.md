@@ -1,5 +1,6 @@
 This dashboard provides a comprehensive operational view of Emergency Room performance, focusing on patient volume, wait times, admissions, demographics, and service efficiency.
-Overall Activity
+
+Sample Overall Activity for November 2024
 Total ER Visits: 464 patients
 Patients Referred to Other Departments: 212
 Patient Satisfaction Score: 5.09 / 10
