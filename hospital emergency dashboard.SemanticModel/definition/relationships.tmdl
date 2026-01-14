@@ -1,0 +1,14 @@
+relationship 94571557-2c7b-49f3-b206-525382366498
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date_table.Date
+	toColumn: LocalDateTable_71569680-94c7-4832-926c-a97863d82d78.Date
+
+relationship d88b6ad7-9888-4829-b0d7-cfa3c1dd114a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Hospital ER_Data'.'Patient Admission Date'
+	toColumn: LocalDateTable_afd553c4-88ce-454e-8cd8-ddcf43011420.Date
+
+relationship 30acd594-3ae2-f140-d608-970e2e86a3af
+	fromColumn: 'Hospital ER_Data'.'Patient Admit Date'
+	toColumn: Date_table.Date
+

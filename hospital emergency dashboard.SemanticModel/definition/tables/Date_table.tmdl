@@ -1,0 +1,67 @@
+table Date_table
+	lineageTag: 81ade753-f5bd-445e-8ec8-48654cae72a3
+
+	column Date
+		formatString: Long Date
+		lineageTag: 5f209692-b676-404a-987d-2a8f81d8714e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 94571557-2c7b-49f3-b206-525382366498
+			defaultHierarchy: LocalDateTable_71569680-94c7-4832-926c-a97863d82d78.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Month = FORMAT(Date_table[Date], "mmm")
+		dataType: string
+		lineageTag: 0b98f528-c6b6-44b0-8233-fd50c7de3b68
+		summarizeBy: none
+		sortByColumn: 'month number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = year(Date_table[Date])
+		formatString: 0
+		lineageTag: 3bf90acc-df39-4e7b-9a39-3ba02c73fbab
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month and Year' = Date_table[Month] & " "& Date_table[Year]
+		lineageTag: 7795dcc9-128b-4455-bedd-b4420b2ba44b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'month number' = MONTH(Date_table[Date])
+		formatString: 0
+		lineageTag: 8fb46bfb-146d-463a-ae01-806e04dfb085
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name' = Format(Date_table[Date], "DDD")
+		lineageTag: 2bc0d056-b9de-4f67-a139-20f7ce54c457
+		summarizeBy: none
+		sortByColumn: 'week day'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'week day' = weekday(Date_table[Date], 2)
+		formatString: 0
+		lineageTag: 808b93a0-abe7-45d1-a735-5fceaddbcabd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date_table = calculated
+		mode: import
+		source = CALENDAR(min('Hospital ER_Data'[Patient Admission Date]), max('Hospital ER_Data'[Patient Admission Date]))
+
+	annotation PBI_Id = 3e2f41af1ac642528fa6f9efc868c5cc
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "hospital emergency dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "66491b5b-d527-4a4c-90a1-989de04781d6"
+  }
+}
